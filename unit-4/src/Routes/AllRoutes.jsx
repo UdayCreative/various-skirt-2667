@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Cart from '../Components/Cart'
 import Favorites from '../Components/Favorites'
 import Home from '../Components/Home'
+import Register from '../Components/Register'
 import SignIn from '../Components/SignIn'
 import SupportCenter from '../Components/SupportCenter'
 
@@ -15,7 +16,7 @@ export default function AllRoutes() {
         <Route path='/signin' element={<SignIn/>}/>
         <Route path='/favorites' element={<Favorites/>}/>
         <Route path='/cart' element={<Cart/>}/>
-        <Route/>
+        <Route path='/register' element={<Register/>} />
         <Route/>
       </Routes>
     </div>

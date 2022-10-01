@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Button, Flex, Image, Input, Link, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, GridItem, Image, Input, Link, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Text } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons"
 
 export default function Navbar() {
   return (
     <>
-      <Flex w="100%" textAlign="center" gap={"262px"} alignItems="center" justifyContent="center">
+      <Flex w="100%" textAlign="center" gap={"160px"} m="0px" alignItems="center" justifyContent="center">
         <Box w="20%">
           <Link href='/'>
             <Image width={"200px"} margin={"25px 0px"}
@@ -26,7 +26,7 @@ export default function Navbar() {
                     Save $3 with App
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent w={"300px"} bg={"white"} p="10px" borderRadius="5px" border={"1px solid"}>
+                <PopoverContent w={"300px"}  bg={"white"} p="10px" borderRadius="5px" border={"1px solid"}>
                   <Flex justifyContent={"space-between"}>
                   <PopoverHeader fontWeight='bold'>Download Apps!</PopoverHeader>
                   <PopoverArrow />
@@ -168,41 +168,42 @@ export default function Navbar() {
               </Button>
 
               <Box display={"flex"} gap="20px">
-                <Box display={"flex"} alignItems="center"> 
-                  <Image w={"20px"} h="20px" src='https://freeiconshop.com/wp-content/uploads/edd/person-outline.png' alt='avatar' />
-                  <Text color={"grey"} fontSize="14px">              
-                    <Link href='/signin' textDecoration={"underline"} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
-                      Sign-In
-                    </Link>
-                  </Text>
-                </Box>
+                <Link href='/signin' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
+                  <Box display={"flex"} alignItems="center"> 
+                    <Image w={"20px"} h="20px" src='https://freeiconshop.com/wp-content/uploads/edd/person-outline.png' alt='avatar' />
+                    <Text color={"grey"} fontSize="14px">              
+                        Sign-In
+                    </Text>
+                  </Box>
+                </Link>
 
-                <Box display={"flex"} alignItems="center"> 
-                  <Image w={"20px"} h="20px" src='https://www.iconpacks.net/icons/2/free-heart-icon-3510-thumb.png' alt='heart' />
-                  <Text color={"grey"} fontSize="14px">
-                    <Link href='/favorites' textDecoration={"underline"} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
-                      Favorites
-                    </Link>
-                  </Text>
-                </Box>
-                <Box display={"flex"} alignItems="center"> 
-                  <Image w={"20px"} h="20px"  src='https://e7.pngegg.com/pngimages/164/964/png-clipart-shopping-cart-computer-icons-bag-shopping-cart-angle-text.png' alt='cart' />
-                  <Text color={"grey"} fontSize="14px">
-                    <Link href='/cart' textDecoration={"underline"} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
-                      Cart
-                    </Link>
-                  </Text>
-                </Box>
+                <Link href='/favorites' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}> 
+                  <Box display={"flex"} alignItems="center">
+                    <Image w={"20px"} h="20px" src='https://www.iconpacks.net/icons/2/free-heart-icon-3510-thumb.png' alt='heart' />
+                    <Text color={"grey"} fontSize="14px">
+                        Favorites
+                    </Text>
+                  </Box>
+                </Link>
+                <Link href='/cart' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
+                  <Box display={"flex"} alignItems="center">
+                      <Image w={"20px"} h="20px"  src='https://e7.pngegg.com/pngimages/164/964/png-clipart-shopping-cart-computer-icons-bag-shopping-cart-angle-text.png' alt='cart' />
+                      <Text color={"grey"} fontSize="14px">
+                          Cart
+                      </Text>
+                  </Box>
+                </Link>
               </Box>           
           </Box>
         </Box>
       </Flex>
-      <Box w="100%" mt="-17px" justifyContent="center" alignItems={"center"} textAlign="left" display="flex">
-        <Text bg="black" color="white" fontWeight="700" p="5px 118px">Category</Text>
-        <Text bg="#ffda00" fontWeight="700" p="5px 109px">SUPER DEALS</Text>
-        <Text bg="#ffda00" fontWeight="700" p="5px 109px">APP ONLY</Text>
-        <Text bg="#ffda00" fontWeight="700" p="5px 107.5px">NEW ARRIVALS</Text>
-      </Box>
+      <Grid w="100%" mt="0px" gridTemplateColumns="repeat(5,230px)" justifyContent="center">
+        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="black" color="white" fontWeight="700" alignItems={"center"} textAlign="center">Category</GridItem>
+        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">SUPER DEALS</GridItem>
+        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">APP ONLY</GridItem>
+        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">NEW ARRIVALS</GridItem>
+        <GridItem h="32px" bg="#ffda00" p="10px 0px 0px" fontWeight="700"></GridItem>
+      </Grid>
   </>
   
   )

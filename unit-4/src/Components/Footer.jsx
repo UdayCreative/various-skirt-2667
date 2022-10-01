@@ -15,20 +15,20 @@ export default function Footer() {
                 <Text>Popular Searchs:</Text>
             </Box>
             <Grid m="14px 0px 0px 30px" rowGap="5" textAlign="center" alignItems="center" templateRows='repeat(2, 1fr)' templateColumns='repeat(7, 1fr)' >
-                <GridItem>realme buds q</GridItem>
-                <GridItem>xiaomi redmi 7 case</GridItem>
-                <GridItem>lenevo Ip1s tws</GridItem>
-                <GridItem>5g phone</GridItem>
-                <GridItem>projector 4k</GridItem>
-                <GridItem>mens's sports shoes</GridItem>
-                <GridItem>creality ender 3</GridItem>
-                <GridItem>xiaomi mi band 5</GridItem>
-                <GridItem>led light strip</GridItem>
-                <GridItem>360s7 robot vaccum cleaner</GridItem>
-                <GridItem>amazfit gts 2</GridItem>
-                <GridItem>roborock s5 max</GridItem>
-                <GridItem>xiaomi vaccum</GridItem>
-                <GridItem>poco x3 nfc</GridItem>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>realme buds q</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>xiaomi redmi 7 case</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>lenevo Ip1s tws</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>5g phone</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>projector 4k</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>mens's sports shoes</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>creality ender 3</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>xiaomi mi band 5</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>led light strip</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>360s7 robot vaccum cleaner</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>amazfit gts 2</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>roborock s5 max</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>xiaomi vaccum</GridItem></Link>
+                <Link href='#' color="#666" textDecoration={"none"} _hover={{textDecoration:"underline"}}><GridItem>poco x3 nfc</GridItem></Link>
             </Grid>
         </Flex>
         <Flex m="50px 177.5px 0px" p="24px 0px 30px" bg="#fff" color="#000">
@@ -36,7 +36,7 @@ export default function Footer() {
             <Box p="0px 70px" textAlign="center" verticalAlign="middle" color="#666"
                  textDecoration="none" fontSize="inherit" outline="none"
                 w="340px" h="102px" cursor="pointer">
-                 <Link textDecoration={"none"} _hover={{textDecoration:"underline"}} href="#">
+                 <Link textDecoration={"none"} href="#">
                     <Image
                         src='https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png'
                         alt="gearbest"
