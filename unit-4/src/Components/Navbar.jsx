@@ -5,7 +5,7 @@ import { SearchIcon } from "@chakra-ui/icons"
 export default function Navbar() {
   return (
     <>
-      <Flex w="100%" textAlign="center" gap={"160px"} m="0px" alignItems="center" justifyContent="center">
+      <Flex w="100%" textAlign="center" gap={"90px"} m="0px" alignItems="center" justifyContent="center">
         <Box w="20%">
           <Link href='/'>
             <Image width={"200px"} margin={"25px 0px"}
@@ -15,12 +15,12 @@ export default function Navbar() {
           </Link>
         </Box>
 
-        <Box w="50%" p="10">
+        <Box w="50%" p="0 0 15px">
             <Box justifyContent={"space-between"}>
               <Popover placement='bottom-start'>
                 <PopoverTrigger>
-                  <Button cursor="pointer" fontize={"13px"} p="18px" fontFamily="OpenSans,Arial" color={"grey"} border={"none"} bg={"white"}>
-                    <Image w={'20px'} 
+                  <Button cursor="pointer"fontSize={"13px"} variant="link" p=" 18px" fontFamily="OpenSans,Arial" color={"grey"} fontWeight={"0"} border={"none"}>
+                    <Image w={'12px'} 
                       src='https://cdn5.vectorstock.com/i/1000x1000/48/89/mobile-phone-icon-in-modern-design-style-for-web-vector-26504889.jpg' 
                       alt='mobile'/>
                     Save $3 with App
@@ -51,11 +51,11 @@ export default function Navbar() {
                 </PopoverContent>
               </Popover>
 
-              <Link href='/supportCenter' textDecoration={"underline"} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>Support Center</Link>
+              <Link href='/supportCenter' _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>Support Center</Link>
 
               <Popover placement='bottom-start'>
                 <PopoverTrigger>
-                  <Button textDecoration={"underline"} cursor="pointer" fontize={"13px"} p="18px" fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"} border={"none"} bg={"white"}>
+                  <Button cursor="pointer"fontSize={"13px"} variant="link" p="18px" fontFamily="OpenSans,Arial" color={"grey"} fontWeight={"0"} border={"none"}>
                     Ship to <Image w={'20px'} 
                       src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png?20151118161041' 
                       alt='usa'/> / USD
@@ -70,7 +70,7 @@ export default function Navbar() {
                   <PopoverBody textAlign={"start"}>
                     <Text>Ship to</Text>
                     <Box>
-                      <select style={{width:"auto"}}>
+                      <select style={{width:"auto", border:"1px solid", borderRadius:"4px"}}>
                         <option value="United States">United States</option>
                         <option value="Brazil">Brazil</option>
                         <option value="France">France</option>
@@ -99,7 +99,7 @@ export default function Navbar() {
                       Currency
                     </Text>
                     <Box>
-                      <select>
+                      <select style={{width:"auto", border:"1px solid", borderRadius:"4px"}}>
                         <option value="USD">$ USD</option>
                       </select>
                     </Box>
@@ -162,8 +162,8 @@ export default function Navbar() {
               <option value="">Consumers Electronics & Personal Care</option>
               <option value="">Drones, Toys & Hobbies</option>  
             </select>
-              <Input w={"360px"} h="25px" border={"2px solid #ffda00"} borderLeft="none" />
-              <Button mr="20px" cursor="pointer" w="25px" p="1px 6px" h="31px" bg={"#ffda00"} border={"2px solid #ffda00"} borderRightRadius="15px">
+              <Input w={"360px"} h="31px" border={"2px solid"} borderColor="#ffda00" borderRight="none" borderLeft="none" borderRadius={"0"} placeholder="Search" />
+              <Button mr="20px" cursor="pointer" w="25px" p="1px 6px" h="31px" bg={"#ffda00"} border={"2px solid #ffda00"} borderLeftRadius="0" borderRightRadius="15px">
                 <SearchIcon />
               </Button>
 
@@ -198,11 +198,11 @@ export default function Navbar() {
         </Box>
       </Flex>
       <Grid w="100%" mt="0px" gridTemplateColumns="repeat(5,230px)" justifyContent="center">
-        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="black" color="white" fontWeight="700" alignItems={"center"} textAlign="center">Category</GridItem>
-        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">SUPER DEALS</GridItem>
-        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">APP ONLY</GridItem>
-        <GridItem w="230px" h="32px" p="10px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">NEW ARRIVALS</GridItem>
-        <GridItem h="32px" bg="#ffda00" p="10px 0px 0px" fontWeight="700"></GridItem>
+        <GridItem w="230px" h="32px" p="4px 0px 0px" bg="black" color="white" fontWeight="700" alignItems={"center"} textAlign="center">Category</GridItem>
+        <GridItem w="230px" h="32px" p="4px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">SUPER DEALS</GridItem>
+        <GridItem w="230px" h="32px" p="4px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">APP ONLY</GridItem>
+        <GridItem w="230px" h="32px" p="4px 0px 0px" bg="#ffda00" fontWeight="700" alignItems={"center"} textAlign="center">NEW ARRIVALS</GridItem>
+        <GridItem h="32px" bg="#ffda00" p="4px 0px 0px" fontWeight="700"></GridItem>
       </Grid>
   </>
   
