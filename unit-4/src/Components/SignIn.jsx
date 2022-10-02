@@ -26,7 +26,7 @@ function Login() {
         console.log(getuserArr)
         if(getuserArr===null){
           alert("User account doesn't exist.Please Signup first")
-          navigate("/signup")
+          navigate("/register")
         }else{
         }
         const {email, password } = inpval;
@@ -47,8 +47,8 @@ function Login() {
                 return el.email===email && el.password === password
               })
               if(userlogin.length===0){
-                alert("Invalid User.Please Signup first")
-                navigate("/signup")
+                alert("Invalid User. Please Signup first")
+                navigate("/register")
               }
               else{
                 alert("Login Successfully")
