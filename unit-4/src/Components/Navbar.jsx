@@ -1,13 +1,14 @@
 import React from 'react'
-import { Box, Button, Flex, Grid, GridItem, Image, Input, Link, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, GridItem, Image, Input, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Text } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons"
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
     <>
       <Flex w="100%" textAlign="center" gap={"90px"} m="0px" alignItems="center" justifyContent="center">
         <Box w="20%">
-          <Link href='/'>
+          <Link to='/'>
             <Image width={"200px"} margin={"25px 0px"}
               src='https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png'
               alt='gearbest'
@@ -16,11 +17,11 @@ export default function Navbar() {
         </Box>
 
         <Box w="50%" p="0 0 15px">
-            <Box justifyContent={"space-between"}>
+            <Box display="flex" justifyContent={"space-evenly"}>
               <Popover placement='bottom-start'>
                 <PopoverTrigger>
                   <Button cursor="pointer"fontSize={"13px"} variant="link" p=" 18px" fontFamily="OpenSans,Arial" color={"grey"} fontWeight={"0"} border={"none"}>
-                    <Image w={'12px'} 
+                    <Image w={'20px'} 
                       src='https://cdn5.vectorstock.com/i/1000x1000/48/89/mobile-phone-icon-in-modern-design-style-for-web-vector-26504889.jpg' 
                       alt='mobile'/>
                     Save $3 with App
@@ -30,7 +31,6 @@ export default function Navbar() {
                   <Flex justifyContent={"space-between"}>
                   <PopoverHeader fontWeight='bold'>Download Apps!</PopoverHeader>
                   <PopoverArrow />
-                  {/* <PopoverCloseButton border={"none"} w={"0px"} /> */}
                   </Flex>
                   <PopoverBody textAlign={"start"}>
                     <Text>Save $3 with App & New User Only</Text>
@@ -45,14 +45,14 @@ export default function Navbar() {
                           src='https://245.tech/wp-content/uploads/2021/01/Google-Play-vs-Apple-Store-2.png' 
                           alt="store" />
                     </Box>
-                      
-                    
                   </PopoverBody>
                 </PopoverContent>
               </Popover>
-
-              <Link href='/supportCenter' _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>Support Center</Link>
-
+              <Link to='/supportCenter'>
+                <Text _hover={{textDecoration:"underline"}} p="20px" fontSize={"13px"} color={"grey"} fontFamily="OpenSans,Arial,Helvetica,sans-serif">
+                          Support Center
+                </Text>
+              </Link>
               <Popover placement='bottom-start'>
                 <PopoverTrigger>
                   <Button cursor="pointer"fontSize={"13px"} variant="link" p="18px" fontFamily="OpenSans,Arial" color={"grey"} fontWeight={"0"} border={"none"}>
@@ -65,7 +65,6 @@ export default function Navbar() {
                   <Flex justifyContent={"space-between"}>
                   <PopoverHeader fontWeight='bold'>Select Regional Settings</PopoverHeader>
                   <PopoverArrow />
-                  {/* <PopoverCloseButton border={"none"} w={"0px"} /> */}
                   </Flex>
                   <PopoverBody textAlign={"start"}>
                     <Text>Ship to</Text>
@@ -168,7 +167,7 @@ export default function Navbar() {
               </Button>
 
               <Box display={"flex"} gap="20px">
-                <Link href='/signin' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
+                <Link to='/signin' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
                   <Box display={"flex"} alignItems="center"> 
                     <Image w={"20px"} h="20px" src='https://freeiconshop.com/wp-content/uploads/edd/person-outline.png' alt='avatar' />
                     <Text color={"grey"} fontSize="14px">              
@@ -177,7 +176,7 @@ export default function Navbar() {
                   </Box>
                 </Link>
 
-                <Link href='/favorites' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}> 
+                <Link to='/favorites' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}> 
                   <Box display={"flex"} alignItems="center">
                     <Image w={"20px"} h="20px" src='https://www.iconpacks.net/icons/2/free-heart-icon-3510-thumb.png' alt='heart' />
                     <Text color={"grey"} fontSize="14px">
@@ -185,7 +184,7 @@ export default function Navbar() {
                     </Text>
                   </Box>
                 </Link>
-                <Link href='/cart' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
+                <Link to='/cart' textDecoration="none" _hover={{textDecoration:"underline"}} fontSize={"13px"} fontFamily="OpenSans,Arial,Helvetica,sans-serif" color={"grey"}>
                   <Box display={"flex"} alignItems="center">
                       <Image w={"20px"} h="20px"  src='https://e7.pngegg.com/pngimages/164/964/png-clipart-shopping-cart-computer-icons-bag-shopping-cart-angle-text.png' alt='cart' />
                       <Text color={"grey"} fontSize="14px">
